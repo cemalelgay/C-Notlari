@@ -71,24 +71,43 @@ namespace Tekrar
 
             #region Taban Dönüştürme
 
-            int sayi = Convert.ToInt32(Console.ReadLine());
+            //int sayi = Convert.ToInt32(Console.ReadLine());
 
-            int sonuc = 0;
-            int basamak = 1;
-            while (sayi > 0)
-            {
-                sonuc += (sayi % 2) * basamak;
-                    basamak *= 10;
-                sayi /= 2;
-            }
+            //int sonuc = 0;
+            //int basamak = 1;
+            //while (sayi > 0)
+            //{
+            //    sonuc += (sayi % 2) * basamak;
+            //        basamak *= 10;
+            //    sayi /= 2;
+            //}
 
-            Console.WriteLine(sonuc);
-            Console.ReadKey();
+            //Console.WriteLine(sonuc);
+            //Console.ReadKey();
 
             #endregion
 
 
+            #region
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            #endregion
 
 
         }

@@ -58,30 +58,80 @@ namespace While
 
             #region SayıTahmini
 
-            Console.WriteLine("[1-10] bir sayı tuttum hadi bul bakalım.");
+            //Console.WriteLine("[1-10] bir sayı tuttum hadi bul bakalım.");
 
-            Random rnd = new Random(); //object tanımla
-            int rasgeleSayi = rnd.Next(1, 11); // min 1 max 10 için (1,11)
-            int tahmin, counter = 0;
+            //Random rnd = new Random(); //object tanımla
+            //int rasgeleSayi = rnd.Next(1, 11); // min 1 max 10 için (1,11)
+            //int tahmin, counter = 0;
 
-            while (true)
-            {
-                counter++;
-                Console.Write("Tahminin Ne: ");
-                tahmin = Convert.ToInt32(Console.ReadLine());
-                if (tahmin == rasgeleSayi)
-                {
-                    break;
-                }
+            //while (true)
+            //{
+            //    counter++;
+            //    Console.Write("Tahminin Ne: ");
+            //    tahmin = Convert.ToInt32(Console.ReadLine());
+            //    if (tahmin == rasgeleSayi)
+            //    {
+            //        break;
+            //    }
 
 
-            }
+            //}
 
-            Console.WriteLine("\nTebrikler...{0}, adımda bildin", counter);
-            Console.ReadLine();
+            //Console.WriteLine("\nTebrikler...{0}, adımda bildin", counter);
+            //Console.ReadLine();
+            #endregion
+
+            #region Sayı Tahmin Oyunu Vers Güncelleme :) 
+
+            //Console.WriteLine("[1-100] bir sayı tuttum hadi bul bakalım.");
+
+            //Random rnd = new Random(); //object tanımla
+            //int rasgeleSayi = rnd.Next(1, 101); // min 1 max 10 için (1,11)
+            //int tahmin, counter = 0;
+
+            //while (true)
+            //{
+            //    counter++;
+            //    Console.Write("Tahminin Ne: ");
+            //    tahmin = Convert.ToInt32(Console.ReadLine());
+            //    if (tahmin == rasgeleSayi)
+            //    {
+            //        Console.WriteLine("Daha büyük tahmin yap");
+            //    }
+            //    else if (tahmin > rasgeleSayi)
+            //    {
+            //        Console.WriteLine("Daha küçük tahmin yap");
+            //    }
+            //    else
+            //    {
+            //        break;
+            //    }
+            //}
+
+            //Console.WriteLine("\nTebrikler...{0}, adımda bildin", counter);
+            //Console.ReadLine();
             #endregion
 
 
+            #region
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            #endregion
 
         }
     }
