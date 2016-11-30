@@ -113,23 +113,36 @@ namespace While
             #endregion
 
 
-            #region
+            #region TekÇift
+            int toplam = 0, carpim = 1;
+            int n = Convert.ToInt32(Console.ReadLine());
 
+            string secim = Console.ReadLine();
 
+            int counter = 1;
+            while (counter <= n)
+            {
+                if (counter % 2 == 1)
+                {
+                    toplam += counter;
+                    carpim += counter;
+                }
+                counter++;
+            }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+            if (secim == "topla")
+            {
+                Console.WriteLine(toplam);
+            }
+            else if (secim == "carp")
+            {
+                Console.WriteLine(carpim);
+            }
+            else
+            {
+                Console.WriteLine(secim + "Ne ?? ");
+            }
+            Console.ReadKey();
 
             #endregion
 
