@@ -89,17 +89,17 @@ namespace For
 
             #region İçİçeFor
 
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    for (int j = 0; j < 5; j++)
-            //    {
-            //        Console.Write("*");
-            //    }
-            //    Console.WriteLine();
-            //}
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
 
 
-            //Console.ReadKey();
+            Console.ReadKey();
             #endregion
 
             #region Harfler
