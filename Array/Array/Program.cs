@@ -104,7 +104,7 @@ namespace Array
 
             // değer atama
 
-            //string[] günler = new string[]("Pazartesi", "Sali", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar");
+            //string[] günler = new string[]{"Pazartesi", "Sali", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"};
 
             //foreach (var gun in günler)
             //{
@@ -114,11 +114,45 @@ namespace Array
 
             #region Günler
 
-            //string[] gunler = new string[]("Pazartesi", "Sali", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar");
+            //string[] gunler = new string[]{"Pazartesi", "Sali", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar"};
 
             //foreach (var gun in gunler)
             //{
             //    Console.WriteLine(gun);
+            //}
+
+            #endregion
+            #region Günler 1 den 7 e kadar 
+
+            //string[] gunler = new string[] { "Pazartesi", "Sali", "Çarşamba", "Perşembe", "Cuma", "Cumartesi", "Pazar" };
+
+            //bool devam = true;
+            //while (devam)
+            //{
+            //    Console.Write("Kaçıncı Gün: ");
+            //    byte gun = Convert.ToByte(Console.ReadLine());
+
+            //    if (gun <= 7 && gun >= 1)
+            //    {
+            //        Console.WriteLine(gunler[gun - 1]);
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("{0}.gün yok ama bir isim bul ekleyiniz:) ", gun);
+            //    }
+            //    Console.WriteLine("\nDevam etmek istsan \"e\" tuşuna bas");
+            //    char c = Convert.ToChar(Console.ReadLine());
+
+            //    if (c == 'e')
+            //    {
+            //        devam = true;
+            //        Console.Clear();
+            //    }
+            //    else
+            //    {
+            //        devam = false;
+            //    }
+
             //}
 
             #endregion
