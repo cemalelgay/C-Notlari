@@ -115,11 +115,15 @@ namespace List
 
             /*var result = numbers.FindAll(i => i > 5); */// 5 ten büyük elemanları List olarak atar.
 
-            var result = numbers.FindAll(i => i > 5).Count(); // 5 den büyük tüm elemanlar döner.
+            // var result = numbers.FindAll(i => i > 5).Count(); // 5 den büyük tüm elemanlar döner.
+
+            numbers.Sort(); // küçükten büyüğe sıralar.
+            numbers.Reverse(); // büyükten küşüğe bu iki koşuluğu kullanmak lazım.
 
             foreach (var item in numbers) 
             {
                 Console.WriteLine("\n\t" + item);
+                
             }
 
             #endregion
