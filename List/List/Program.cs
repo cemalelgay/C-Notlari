@@ -74,10 +74,10 @@ namespace List
 
             #region Numara Silme
 
-            List<int> numbers = new List<int>();
-            numbers.Add(3);
-            numbers.Add(5);
-            numbers.AddRange(new int[] { 8, 10, 13, 3, 8 });
+            //List<int> numbers = new List<int>();
+            //numbers.Add(3);
+            //numbers.Add(5);
+            //numbers.AddRange(new int[] { 8, 10, 13, 3, 8 });
 
             /////*numbers.RemoveAt(0);*/ // 0.indisi siler (3) // girilen index silinir.
             ////// numbers.Remove(3); // ilk gördüğü 3 değerini siler.  // girilen değer silinir. ama o değerden birden fazla varsa ilki silinir.
@@ -117,15 +117,52 @@ namespace List
 
             // var result = numbers.FindAll(i => i > 5).Count(); // 5 den büyük tüm elemanlar döner.
 
-            numbers.Sort(); // küçükten büyüğe sıralar.
-            numbers.Reverse(); // büyükten küşüğe bu iki koşuluğu kullanmak lazım.
+            //numbers.Sort(); // küçükten büyüğe sıralar.
+            //numbers.Reverse(); // büyükten küşüğe bu iki koşuluğu kullanmak lazım.
 
-            foreach (var item in numbers) 
+            //foreach (var item in numbers)
+            //{
+            //    Console.WriteLine("\n\t" + item);
+
+            //}
+
+            #endregion
+
+
+            #region Tersten Harfler
+
+            //List<char> harf = new List<char>();
+
+            //for (char i = 'a'; i <= 'z'; i++)
+            //{
+            //    harf.Add(i);
+            //}
+            //foreach (var i in harf)
+            //{
+            //    Console.Write(i + " ");
+            //}
+            //harf.Reverse();
+            //for (int i = 0; i < harf.Count; i++)
+            //{
+            //    Console.WriteLine(harf[i] + " ");
+            //}
+            //Console.ReadKey();
+            #endregion
+
+            #region İsimler
+
+            List<string> isimler = new List<string>();
+
+            isimler.Add("Hakan");
+            isimler.AddRange(new string[] { "İrfan", "Aytekin", "Cemal", "Merve", "Yankı", "Atakan" });
+
+            isimler.Sort();
+            isimler.Reverse();
+            foreach (var item in isimler)
             {
-                Console.WriteLine("\n\t" + item);
-                
+                Console.WriteLine("\t" + item);
             }
-
+            Console.ReadKey();
             #endregion
 
         }
