@@ -24,5 +24,10 @@ namespace HesapMakinesi
 
             MessageBox.Show(remzi.Text + " e bastın.");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
