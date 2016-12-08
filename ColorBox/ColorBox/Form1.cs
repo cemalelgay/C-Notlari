@@ -41,16 +41,34 @@ namespace ColorBox
                 btn.Width = 50;
                 btn.Height = 50;
 
-                btn.BackColor = RasgeleRenkOlustur();
-
-                btn.Left = btn.Width * i;
+                btn.BackColor = RasgeleRenkOlustur();                
                 btn.Click += ButtonClick;
+
+                if (i == 9)
+                {
+                    btn.Left = 0;
+                }
+                if (i < 10)
+                {
+                    btn.Left = btn.Width * i;
+                    btn.Top = btn.Height;
+                    
+                }
+                if (i >= 10 && i < 20)
+                {
+                    btn.Left = btn.Width * (i - 10);
+                    btn.Top = btn.Height * 2;
+                }
+
+                //btn.Left = btn.Width * i;
+                //btn.Top = btn.Height;
+                //btn.Click += ButtonClick;
 
                 this.Controls.Add(btn);
             }
         }
 
-        private void ButtonClick (object sender, EventArgs e)
+        private void ButtonClick(object sender, EventArgs e)
         {
             Button secilenbuton = sender as Button;
             this.BackColor = secilenbuton.BackColor;
