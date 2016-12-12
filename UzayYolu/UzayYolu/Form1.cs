@@ -59,10 +59,14 @@ namespace UzayYolu
             if (SpaceX > genislik - SpaceShip.Width || SpaceX <= 0)
             {
                 MessageBox.Show("Lanet Olsun Oyun Bitti...!");
+                SpaceShip.Location = new Point(10, 10); // Program başa döner kapanmaz.
+                Application.Exit(); // Program kapanır
             }
             else if (SpaceY > yukseklik - SpaceShip.Height || SpaceY <= 0)
             {
                 MessageBox.Show("Lanet Olsun Oyun Bitti...!");
+                SpaceShip.Location = new Point(10, 10); // Program başa döner kapanmaz.
+                Application.Exit(); // Program kapanır
             }
         }
         private void timer1_Tick(object sender, EventArgs e)
