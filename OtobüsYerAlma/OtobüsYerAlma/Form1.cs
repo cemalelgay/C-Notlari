@@ -26,16 +26,19 @@ namespace OtobüsYerAlma
             {
                 for (int j = 0; j < 5; j++)
                 {
-                    Button btn = new Button();
-                    btn.Width = 30;
-                    btn.Height = 30;
-                    btn.Left = btn.Width * j;
-                    btn.Top = btn.Width * i;
-                    btn.Text = sayac.ToString();
+                    if (j ==0|| j==1 || (i==11 && j==2 )||(j== 3&& i !=6)||(j==4&&i!=6)||j==5)
+                    {
+                        Button btn = new Button();
+                        btn.Width = 30;
+                        btn.Height = 30;
+                        btn.Left = btn.Width * j;
+                        btn.Top = btn.Width * i;
+                        btn.Text = sayac.ToString();
 
-                    this.Controls.Add(btn);
+                        this.Controls.Add(btn);
 
-                    sayac++;
+                        sayac++;
+                    }
                 }
             }
         }
