@@ -16,13 +16,26 @@ namespace ZarAt
         {
             InitializeComponent();
         }
-        
-        private void zarAtBtn_Click(object sender, EventArgs e)
+        Random rnd = new Random();
+        private void ZarAt()
         {
-            Random rnd = new Random();
-            int zar = rnd.Next(1, 7);
-            pictureBox1.ImageLocation = System.IO.Path.GetFullPath("Zarresim/" + zar + ".png");
+            int sayi;
+            sayi = rnd.Next(1, 7);
+            Zar1.ImageLocation = System.IO.Path.GetFullPath("Zarresim/" + sayi + ".png");
+            sayi = rnd.Next(1, 7);
+            Zar2.ImageLocation = System.IO.Path.GetFullPath("Zarresim/" + sayi + ".png");
+
             MessageBox.Show("2 Zar YüzBin Verdik");
+        }
+
+        private void Zar1_Click(object sender, EventArgs e)
+        {
+            ZarAt();
+        }
+
+        private void Zar2_Click(object sender, EventArgs e)
+        {
+            ZarAt();
         }
     }
 }
