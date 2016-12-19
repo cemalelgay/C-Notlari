@@ -19,19 +19,53 @@ namespace DialogEkranı
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Devam Etmek İstiyormusun?","Onay Ekranı", MessageBoxButtons.YesNoCancel);
+            //DialogResult result = MessageBox.Show("Devam Etmek İstiyormusun?", "Onay Ekranı", MessageBoxButtons.YesNoCancel);
 
-            if(result == DialogResult.Yes)
+            //if (result == DialogResult.Yes)
+            //{
+            //    BtnKaydet.Text = "Evet";
+            //}
+            //else if (result == DialogResult.No)
+            //{
+            //    BtnKaydet.Text = "Hayır";
+            //}
+            //else
+            //{
+            //    BtnKaydet.Text = "İptal";
+            //}
+
+
+            if (TxtAd.Text != "")
             {
-                button1.Text = "Evet";
+                listBox1.Items.Add(TxtAd.Text);
+            }
+            TxtAd.Clear();
+            TxtAd.Focus();
+            TxtAd.ForeColor = Color.Red;
+            
+        }
+
+        private void listBox1_DoubleClick(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Silmek İstiyormusun?", "Onay Ekranı", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                listBox1.Items.RemoveAt(listBox1.SelectedIndex);
             }
             else if (result == DialogResult.No)
             {
-                button1.Text = "Hayır";
+                
             }
-            else
+           
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Hepsi Silinecek?", "Onay Ekranı", MessageBoxButtons.OKCancel);
+            if (result == DialogResult.OK)
             {
-                button1.Text = "İptal";
+                listBox1.Items.Clear();
             }
         }
     }
