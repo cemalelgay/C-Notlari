@@ -167,7 +167,7 @@
             this.groupBox2.Controls.Add(this.RbtnErkek);
             this.groupBox2.Location = new System.Drawing.Point(0, 63);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 72);
+            this.groupBox2.Size = new System.Drawing.Size(140, 47);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Cinsiyet";
@@ -175,7 +175,7 @@
             // RbtnKadin
             // 
             this.RbtnKadin.AutoSize = true;
-            this.RbtnKadin.Location = new System.Drawing.Point(0, 44);
+            this.RbtnKadin.Location = new System.Drawing.Point(80, 20);
             this.RbtnKadin.Name = "RbtnKadin";
             this.RbtnKadin.Size = new System.Drawing.Size(57, 17);
             this.RbtnKadin.TabIndex = 1;

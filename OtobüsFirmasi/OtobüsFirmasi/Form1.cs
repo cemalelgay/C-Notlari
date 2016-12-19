@@ -76,12 +76,30 @@ namespace OtobüsFirmasi
         }
         private void Button_Click(object sender, EventArgs e)
         {
+            RbtnErkek.Enabled = true;
+            RbtnKadin.Enabled = true;
             Button secilenKoltuk = sender as Button;
             LabelKoltukNo.Text = secilenKoltuk.Text;
             LabelOtobusTuru.Text = CBoxOtobusTuru.SelectedItem.ToString();
 
             if (LabelOtobusTuru.Text == "Travego")
             {
+                if (int.Parse(LabelKoltukNo.Text) % 2 == 0 && travegoYolcularCinsiyet[int.Parse(LabelKoltukNo.Text) - 2] == "Kadin")
+                {
+                    RbtnErkek.Enabled = false;
+                }
+                else if (int.Parse(LabelKoltukNo.Text) % 2 == 0 && travegoYolcularCinsiyet[int.Parse(LabelKoltukNo.Text) - 2] == "Erkek")
+                {
+                    RbtnKadin.Enabled = false;
+                }
+                else if (int.Parse(LabelKoltukNo.Text) % 2 != 0 && travegoYolcularCinsiyet[int.Parse(LabelKoltukNo.Text)] == "Kadin")
+                {
+                    RbtnErkek.Enabled = false;
+                }
+                else if (int.Parse(LabelKoltukNo.Text) % 2 != 0 && travegoYolcularCinsiyet[int.Parse(LabelKoltukNo.Text)] == "Erkek")
+                {
+                    RbtnErkek.Enabled = false;
+                }
                 string yolcu = travegoYolcularIsim[int.Parse(secilenKoltuk.Text) - 1];
                 if (yolcu !="")
                 {
@@ -100,6 +118,22 @@ namespace OtobüsFirmasi
             }
             else
             {
+                if (int.Parse(LabelKoltukNo.Text) % 2 == 0 && setraYolcularCinsiyet[int.Parse(LabelKoltukNo.Text) - 2] == "Kadin")
+                {
+                    RbtnErkek.Enabled = false;
+                }
+                else if (int.Parse(LabelKoltukNo.Text) % 2 == 0 && setraYolcularCinsiyet[int.Parse(LabelKoltukNo.Text) - 2] == "Erkek")
+                {
+                    RbtnKadin.Enabled = false;
+                }
+                else if (int.Parse(LabelKoltukNo.Text) % 2 != 0 && setraYolcularCinsiyet[int.Parse(LabelKoltukNo.Text)] == "Kadin")
+                {
+                    RbtnErkek.Enabled = false;
+                }
+                else if (int.Parse(LabelKoltukNo.Text) % 2 != 0 && setraYolcularCinsiyet[int.Parse(LabelKoltukNo.Text)] == "Erkek")
+                {
+                    RbtnErkek.Enabled = false;
+                }
                 string yolcu = setraYolcularIsim[int.Parse(secilenKoltuk.Text) - 1];
                 if (yolcu != "")
                 {
