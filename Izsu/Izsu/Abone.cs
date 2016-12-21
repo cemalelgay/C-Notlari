@@ -6,10 +6,30 @@ using System.Threading.Tasks;
 
 namespace Izsu
 {
-    class Abone
+    public class Abone
     {
+        public string AboneNo;
         public string AdSoyad;
-        public double tutar;
-        public int oncekindex, sonrakindex;
+        public int OncekiSayac,SonSayac ;
+        public string AboneTuru;
+
+        public double OdemeHesapla(double onceki , double son, string aboneTuru)
+        {
+            double result = 0;
+            if (aboneTuru == "Ev")
+            {
+                result = (son - onceki) * 0.3;
+            }
+            else
+            {
+                result = (son - onceki) * 0.5;
+            }
+            return result;
+        }
+
+        public override string ToString()
+        {
+            return this.AboneNo + " " + this.AdSoyad;
+        }
     }
 }
