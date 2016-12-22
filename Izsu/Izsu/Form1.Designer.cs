@@ -155,9 +155,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(13, 261);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 17);
+            this.label2.Size = new System.Drawing.Size(78, 17);
             this.label2.TabIndex = 11;
-            this.label2.Text = "Ödenecek Faturalar:";
+            this.label2.Text = "Aboneler:";
             // 
             // label3
             // 
@@ -166,9 +166,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(207, 261);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 17);
+            this.label3.Size = new System.Drawing.Size(89, 17);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Ödenen Faturalar:";
+            this.label3.Text = "Ödenenler:";
             // 
             // label4
             // 
