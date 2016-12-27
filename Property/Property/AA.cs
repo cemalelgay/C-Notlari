@@ -25,7 +25,7 @@ namespace Property
                 // _z = value;
                 if (value > 81 || value <1)
                 {
-
+                    mesaj = "Yanlış Plaka Kodu";
                 }
                 else
                 {
