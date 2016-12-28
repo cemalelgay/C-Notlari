@@ -17,10 +17,15 @@ namespace Kentkart_OOP
             InitializeComponent();
         }
 
+        public Form1(Kart yolcu)
+        {
+            InitializeComponent();
+        }
+
         ÖgrenciKart ogrenci = new ÖgrenciKart();
         ÖgretmenKart ogretmen = new ÖgretmenKart();
         Kart tam = new Kart();
-        int kartid = 1;
+        int kartid = 1;       
         private void BtnEkle_Click(object sender, EventArgs e)
         {
             if (RadioBtnOgrenci.Checked == true)
@@ -91,7 +96,9 @@ namespace Kentkart_OOP
 
             if (result == DialogResult.Yes)
             {
-
+                Form2 frm2 = new Form2(yolcu);
+                frm2.Show();
+                this.Hide();
             }
             else
             {
