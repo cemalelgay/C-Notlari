@@ -20,8 +20,7 @@ namespace Kentkart_OOP
         public Form1(Kart yolcu)
         {
             InitializeComponent();
-        }
-
+        }        
         ÖgrenciKart ogrenci = new ÖgrenciKart();
         ÖgretmenKart ogretmen = new ÖgretmenKart();
         Kart tam = new Kart();
