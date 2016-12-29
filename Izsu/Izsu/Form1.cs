@@ -33,6 +33,8 @@ namespace Izsu
             Rdnbtbnsirket.Checked = false;
 
             ListBoxOdenecekler.Items.Add(_abone);
+
+            
         }
 
         private void LstOdemeListesi_DoubleClick(object sender, EventArgs e)
