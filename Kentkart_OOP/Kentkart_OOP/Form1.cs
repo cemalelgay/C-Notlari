@@ -20,11 +20,21 @@ namespace Kentkart_OOP
         public Form1(Kart yolcu)
         {
             InitializeComponent();
-        }        
+            foreach (var item in kaliciListe)
+            {
+                ListBoxYolcular.Items.Add(item);
+            }
+            ListBoxYolcular.Items.Add(yolcu);
+            kaliciListe.Add(yolcu);
+            tam.bakiye = yolcu.bakiye;
+        }
+
+        static List<Kart> kaliciListe = new List<Kart>();
+
         ÖgrenciKart ogrenci = new ÖgrenciKart();
         ÖgretmenKart ogretmen = new ÖgretmenKart();
         Kart tam = new Kart();
-        int kartid = 1;       
+        int kartid = 1;
         private void BtnEkle_Click(object sender, EventArgs e)
         {
             if (RadioBtnOgrenci.Checked == true)
@@ -35,6 +45,7 @@ namespace Kentkart_OOP
                 ogrenci.okulAdi = TxtOkuladi.Text;
                 ogrenci.kartTuru = YolcuTipi.Ogrenci;
                 ListBoxYolcular.Items.Add(ogrenci);
+                kaliciListe.Add(ogrenci);
             }
             else if (RadioBtnOgretmen.Checked == true)
             {
@@ -43,6 +54,7 @@ namespace Kentkart_OOP
                 kartid++;
                 ogretmen.kartTuru = YolcuTipi.Ogretmen;
                 ListBoxYolcular.Items.Add(ogretmen);
+                kaliciListe.Add(ogretmen);
             }
             else
             {
@@ -51,6 +63,7 @@ namespace Kentkart_OOP
                 kartid++;
                 tam.kartTuru = YolcuTipi.Tam;
                 ListBoxYolcular.Items.Add(tam);
+                kaliciListe.Add(tam);
             }
 
             Temizle();
@@ -89,19 +102,14 @@ namespace Kentkart_OOP
             else
             {
                 MessageBox.Show("Bakiye Yetersiz!");
-            }
+                DialogResult result = MessageBox.Show("Bakiye Yüklemek İster Misin? ", "Bildirim Ekranı", MessageBoxButtons.YesNo);
 
-            DialogResult result = MessageBox.Show("Bakiye Yüklemek İster Misin? ", "Bildirim Ekranı",MessageBoxButtons.YesNo);
-
-            if (result == DialogResult.Yes)
-            {
-                Form2 frm2 = new Form2(yolcu);
-                frm2.Show();
-                this.Hide();
-            }
-            else
-            {
-
+                if (result == DialogResult.Yes)
+                {
+                    Form2 frm2 = new Form2(yolcu);
+                    frm2.Show();
+                    this.Hide();
+                }
             }
         }
         private void Temizle()

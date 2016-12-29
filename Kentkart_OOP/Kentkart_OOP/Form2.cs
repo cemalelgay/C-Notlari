@@ -26,7 +26,7 @@ namespace Kentkart_OOP
         {
             gelenYolcu.bakiye += int.Parse(TxtBakiye.Text);
 
-            Form1 frm1 = new Form1();
+            Form1 frm1 = new Form1(gelenYolcu);
             frm1.Show();
             this.Hide();
         }
