@@ -39,10 +39,13 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.BtnSiparis = new System.Windows.Forms.Button();
             this.BtnOdeme = new System.Windows.Forms.Button();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radiobutton4 = new System.Windows.Forms.RadioButton();
+            this.RadioBtnDolar = new System.Windows.Forms.RadioButton();
+            this.RadioBtnEuro = new System.Windows.Forms.RadioButton();
+            this.RadioBtnPound = new System.Windows.Forms.RadioButton();
+            this.RadioBtnTl = new System.Windows.Forms.RadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumericIcecek)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumericYemek)).BeginInit();
@@ -69,7 +72,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.groupBox2.Location = new System.Drawing.Point(12, 298);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(345, 121);
+            this.groupBox2.Size = new System.Drawing.Size(337, 121);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Siparis";
@@ -152,64 +155,101 @@
             this.BtnOdeme.TabIndex = 4;
             this.BtnOdeme.Text = "ÖDEME";
             this.BtnOdeme.UseVisualStyleBackColor = false;
+            this.BtnOdeme.Click += new System.EventHandler(this.BtnOdeme_Click);
             // 
-            // radioButton1
+            // RadioBtnDolar
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton1.Location = new System.Drawing.Point(274, 218);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 21);
-            this.radioButton1.TabIndex = 5;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Dolar";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RadioBtnDolar.AutoSize = true;
+            this.RadioBtnDolar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RadioBtnDolar.Location = new System.Drawing.Point(274, 218);
+            this.RadioBtnDolar.Name = "RadioBtnDolar";
+            this.RadioBtnDolar.Size = new System.Drawing.Size(65, 21);
+            this.RadioBtnDolar.TabIndex = 5;
+            this.RadioBtnDolar.TabStop = true;
+            this.RadioBtnDolar.Text = "Dolar";
+            this.RadioBtnDolar.UseVisualStyleBackColor = true;
+            this.RadioBtnDolar.CheckedChanged += new System.EventHandler(this.RadioBtnDolar_CheckedChanged);
             // 
-            // radioButton2
+            // RadioBtnEuro
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton2.Location = new System.Drawing.Point(411, 191);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(60, 21);
-            this.radioButton2.TabIndex = 6;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Euro";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RadioBtnEuro.AutoSize = true;
+            this.RadioBtnEuro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RadioBtnEuro.Location = new System.Drawing.Point(411, 191);
+            this.RadioBtnEuro.Name = "RadioBtnEuro";
+            this.RadioBtnEuro.Size = new System.Drawing.Size(60, 21);
+            this.RadioBtnEuro.TabIndex = 6;
+            this.RadioBtnEuro.TabStop = true;
+            this.RadioBtnEuro.Text = "Euro";
+            this.RadioBtnEuro.UseVisualStyleBackColor = true;
+            this.RadioBtnEuro.CheckedChanged += new System.EventHandler(this.RadioBtnEuro_CheckedChanged);
             // 
-            // radioButton3
+            // RadioBtnPound
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radioButton3.Location = new System.Drawing.Point(411, 218);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(72, 21);
-            this.radioButton3.TabIndex = 7;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Pound";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.RadioBtnPound.AutoSize = true;
+            this.RadioBtnPound.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RadioBtnPound.Location = new System.Drawing.Point(411, 218);
+            this.RadioBtnPound.Name = "RadioBtnPound";
+            this.RadioBtnPound.Size = new System.Drawing.Size(72, 21);
+            this.RadioBtnPound.TabIndex = 7;
+            this.RadioBtnPound.TabStop = true;
+            this.RadioBtnPound.Text = "Pound";
+            this.RadioBtnPound.UseVisualStyleBackColor = true;
+            this.RadioBtnPound.CheckedChanged += new System.EventHandler(this.RadioBtnPound_CheckedChanged);
             // 
-            // radiobutton4
+            // RadioBtnTl
             // 
-            this.radiobutton4.AutoSize = true;
-            this.radiobutton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.radiobutton4.Location = new System.Drawing.Point(273, 195);
-            this.radiobutton4.Name = "radiobutton4";
-            this.radiobutton4.Size = new System.Drawing.Size(45, 21);
-            this.radiobutton4.TabIndex = 8;
-            this.radiobutton4.TabStop = true;
-            this.radiobutton4.Text = "TL";
-            this.radiobutton4.UseVisualStyleBackColor = true;
+            this.RadioBtnTl.AutoSize = true;
+            this.RadioBtnTl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.RadioBtnTl.Location = new System.Drawing.Point(273, 195);
+            this.RadioBtnTl.Name = "RadioBtnTl";
+            this.RadioBtnTl.Size = new System.Drawing.Size(45, 21);
+            this.RadioBtnTl.TabIndex = 8;
+            this.RadioBtnTl.TabStop = true;
+            this.RadioBtnTl.Text = "TL";
+            this.RadioBtnTl.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(352, 322);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(47, 17);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Euro:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(352, 298);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Dolar:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label5.Location = new System.Drawing.Point(352, 344);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(59, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Pound:";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(574, 466);
-            this.Controls.Add(this.radiobutton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.RadioBtnTl);
+            this.Controls.Add(this.RadioBtnPound);
+            this.Controls.Add(this.RadioBtnEuro);
+            this.Controls.Add(this.RadioBtnDolar);
             this.Controls.Add(this.BtnOdeme);
             this.Controls.Add(this.BtnSiparis);
             this.Controls.Add(this.listBox1);
@@ -240,10 +280,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ComboBoxIcecek;
         private System.Windows.Forms.ComboBox ComboBoxYemek;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radiobutton4;
+        private System.Windows.Forms.RadioButton RadioBtnDolar;
+        private System.Windows.Forms.RadioButton RadioBtnEuro;
+        private System.Windows.Forms.RadioButton RadioBtnPound;
+        private System.Windows.Forms.RadioButton RadioBtnTl;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }
 
