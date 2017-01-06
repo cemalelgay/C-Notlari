@@ -21,7 +21,7 @@ namespace CemalElgay_KafeSiparisi
         XmlDocument xmlDoc;
         DateTime tarih;
         private void Form1_Load(object sender, EventArgs e)
-        {            
+        {
             #region Combobox Yemek - İçeçek
 
             ComboBoxYemek.Items.Add("Kuru Fasulye");
@@ -38,8 +38,8 @@ namespace CemalElgay_KafeSiparisi
             #endregion
 
             #region Masa Button   
-            int sayac = 1;    
-                 
+            int sayac = 1;
+
             for (int i = 0; i < 5; i++)
             {
                 for (int j = 0; j < 3; j++)
@@ -47,11 +47,11 @@ namespace CemalElgay_KafeSiparisi
                     Button btn = new Button();
                     btn.Width = 40;
                     btn.Height = 40;
-                    btn.Left = btn.Width * j;
-                    btn.Top = btn.Width * i;
+                    btn.Left = btn.Width * j + 1;
+                    btn.Top = btn.Width * i + 20;
                     btn.Text = sayac.ToString(); ;
                     groupBox1.Controls.Add(btn);
-                    
+
                     sayac++;
                 }
             }
@@ -65,13 +65,13 @@ namespace CemalElgay_KafeSiparisi
             xmlDoc.Load("http://www.tcmb.gov.tr/kurlar/today.xml");
             tarih = Convert.ToDateTime(xmlDoc.SelectSingleNode("//Tarih_Date").Attributes["Tarih"].Value);
 
-           
+
 
             #endregion
         }
 
         private void BtnSiparis_Click(object sender, EventArgs e)
-        {           
+        {
             listBox1.Items.Add(groupBox1);
         }
 
