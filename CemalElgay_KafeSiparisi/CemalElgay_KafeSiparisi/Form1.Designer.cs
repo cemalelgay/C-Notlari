@@ -51,9 +51,9 @@
             // groupBox1
             // 
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox1.Location = new System.Drawing.Point(13, 27);
+            this.groupBox1.Location = new System.Drawing.Point(23, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(236, 292);
+            this.groupBox1.Size = new System.Drawing.Size(236, 261);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Masalar";
@@ -67,7 +67,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.groupBox2.Location = new System.Drawing.Point(13, 334);
+            this.groupBox2.Location = new System.Drawing.Point(12, 298);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(345, 121);
             this.groupBox2.TabIndex = 1;
@@ -134,12 +134,13 @@
             // 
             this.BtnSiparis.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BtnSiparis.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.BtnSiparis.Location = new System.Drawing.Point(13, 461);
+            this.BtnSiparis.Location = new System.Drawing.Point(12, 425);
             this.BtnSiparis.Name = "BtnSiparis";
             this.BtnSiparis.Size = new System.Drawing.Size(177, 30);
             this.BtnSiparis.TabIndex = 3;
             this.BtnSiparis.Text = "SİPARİŞ VER";
             this.BtnSiparis.UseVisualStyleBackColor = false;
+            this.BtnSiparis.Click += new System.EventHandler(this.BtnSiparis_Click);
             // 
             // BtnOdeme
             // 
@@ -204,7 +205,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(538, 533);
+            this.ClientSize = new System.Drawing.Size(574, 466);
             this.Controls.Add(this.radiobutton4);
             this.Controls.Add(this.radioButton3);
             this.Controls.Add(this.radioButton2);

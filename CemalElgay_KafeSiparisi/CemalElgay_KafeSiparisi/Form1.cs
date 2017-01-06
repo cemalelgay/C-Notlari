@@ -18,7 +18,7 @@ namespace CemalElgay_KafeSiparisi
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {            
             #region Combobox Yemek - İçeçek
 
             ComboBoxYemek.Items.Add("Kuru Fasulye");
@@ -34,12 +34,30 @@ namespace CemalElgay_KafeSiparisi
 
             #endregion
 
-            #region Masa Button
-           
-
-
-
+            #region Masa Button   
+            int sayac = 1;    
+                 
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Button btn = new Button();
+                    btn.Width = 40;
+                    btn.Height = 40;
+                    btn.Left = btn.Width * j;
+                    btn.Top = btn.Width * i;
+                    btn.Text = sayac.ToString(); ;
+                    groupBox1.Controls.Add(btn);
+                    a
+                    sayac++;
+                }
+            }
             #endregion
+        }
+
+        private void BtnSiparis_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
