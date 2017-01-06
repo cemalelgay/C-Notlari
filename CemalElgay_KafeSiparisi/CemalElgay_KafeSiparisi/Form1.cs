@@ -23,7 +23,8 @@ namespace CemalElgay_KafeSiparisi
         private void Form1_Load(object sender, EventArgs e)
         {
             #region Combobox Yemek - İçeçek
-
+            Masa _ad = new Masa();
+            
             ComboBoxYemek.Items.Add("Kuru Fasulye");
             ComboBoxYemek.Items.Add("Tavuklu Pilav");
             ComboBoxYemek.Items.Add("Simit Tost");
@@ -49,7 +50,7 @@ namespace CemalElgay_KafeSiparisi
                     btn.Height = 40;
                     btn.Left = btn.Width * j + 1;
                     btn.Top = btn.Width * i + 20;
-                    btn.Text = sayac.ToString(); ;
+                    btn.Text = sayac.ToString();
                     groupBox1.Controls.Add(btn);
 
                     sayac++;
@@ -72,7 +73,7 @@ namespace CemalElgay_KafeSiparisi
 
         private void BtnSiparis_Click(object sender, EventArgs e)
         {
-            listBox1.Items.Add(groupBox1);
+
         }
 
         private void RadioBtnEuro_CheckedChanged(object sender, EventArgs e)

@@ -10,6 +10,7 @@ namespace CemalElgay_KafeSiparisi
     {
         public int masaNo { get; set; }
         public double tutar { get; set; }
+        public string ad { get; set; }
 
         public List<Icecek> Icecekler { get; set; }
         public List<Yemek> Yemekler { get; set; }
