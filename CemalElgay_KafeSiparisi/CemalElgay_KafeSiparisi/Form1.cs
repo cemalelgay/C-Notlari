@@ -48,7 +48,7 @@ namespace CemalElgay_KafeSiparisi
                     btn.Top = btn.Width * i;
                     btn.Text = sayac.ToString(); ;
                     groupBox1.Controls.Add(btn);
-                    a
+                    
                     sayac++;
                 }
             }
