@@ -17,5 +17,10 @@ namespace CodeFirst_Sample_2.DBCon
 
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Product> Product { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Product>().Property(p => p.ProductPrice).HasColumnType("money");
+        }
     }   
 }
