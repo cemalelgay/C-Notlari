@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kentkart_OOP.DBCon;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -116,6 +117,20 @@ namespace Kentkart_OOP
         {
             TxtBakiye.Clear();
             TxtOkuladi.Clear();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            using (KentKartDB context = new KentKartDB())
+            {
+                var result = context.Kart.ToList();
+                if (result.Count==0)
+                {
+                    context.Kart.Add(new Kart { kartTuru = YolcuTipi.Ogrenci  });
+                    context.Kart.Add(new Kart { kartTuru = YolcuTipi.Ogretmen });
+                    context.Kart.Add(new Kart { kartTuru = YolcuTipi.Tam });
+                }
+            }           
         }
     }
 }

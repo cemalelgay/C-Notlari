@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Kentkart_OOP
 {
-    class ÖgrenciKart : Kart
+    public class ÖgrenciKart : Kart
     {
         public ÖgrenciKart()
         {

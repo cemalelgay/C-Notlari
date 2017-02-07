@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace Kentkart_OOP
 {
-    class ÖgretmenKart : Kart
+    public class ÖgretmenKart : Kart
     {
         public override void Okut()
         {
