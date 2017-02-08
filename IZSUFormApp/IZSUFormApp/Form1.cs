@@ -209,7 +209,7 @@ namespace IZSUFormApp
                     }
                 }
 
-                TxtToplamBorc.Text = toplamBorc + ToString() + " ₺";
+                TxtToplamBorc.Text = toplamBorc + " ₺";
 
                 dgvBilgiler.DataSource = result; 
             }
