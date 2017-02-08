@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.GroupBoxAbone = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.cboxAboneTuru = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.TxtAdSoyad = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@
             this.GroupBoxFatura = new System.Windows.Forms.GroupBox();
             this.dtTarih = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnGetir = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.TxtFaturaAdSoyad = new System.Windows.Forms.TextBox();
             this.BtnEkle = new System.Windows.Forms.Button();
@@ -50,11 +50,14 @@
             this.TxtFaturaOncekiSayac = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.TxtFaturaAboneNo = new System.Windows.Forms.TextBox();
-            this.cboxFaturaAboneTuru = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.BtnBas = new System.Windows.Forms.Button();
+            this.dgvBilgiler = new System.Windows.Forms.DataGridView();
+            this.BtnTumunuGetir = new System.Windows.Forms.Button();
+            this.lblToplamBorc = new System.Windows.Forms.Label();
+            this.TxtToplamBorc = new System.Windows.Forms.TextBox();
             this.GroupBoxAbone.SuspendLayout();
             this.GroupBoxFatura.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBilgiler)).BeginInit();
             this.SuspendLayout();
             // 
             // GroupBoxAbone
@@ -76,15 +79,15 @@
             this.GroupBoxAbone.TabStop = false;
             this.GroupBoxAbone.Text = "Abone Bilgisi";
             // 
-            // label5
+            // label2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(9, 114);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(87, 17);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Abone Türü:";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 123);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 17);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Abone Türü:";
             // 
             // cboxAboneTuru
             // 
@@ -147,11 +150,10 @@
             // GroupBoxFatura
             // 
             this.GroupBoxFatura.BackColor = System.Drawing.Color.DarkGreen;
-            this.GroupBoxFatura.Controls.Add(this.cboxFaturaAboneTuru);
-            this.GroupBoxFatura.Controls.Add(this.label5);
+            this.GroupBoxFatura.Controls.Add(this.BtnTumunuGetir);
             this.GroupBoxFatura.Controls.Add(this.dtTarih);
             this.GroupBoxFatura.Controls.Add(this.label7);
-            this.GroupBoxFatura.Controls.Add(this.button1);
+            this.GroupBoxFatura.Controls.Add(this.BtnGetir);
             this.GroupBoxFatura.Controls.Add(this.label9);
             this.GroupBoxFatura.Controls.Add(this.TxtFaturaAdSoyad);
             this.GroupBoxFatura.Controls.Add(this.BtnEkle);
@@ -172,7 +174,7 @@
             // 
             // dtTarih
             // 
-            this.dtTarih.Location = new System.Drawing.Point(115, 152);
+            this.dtTarih.Location = new System.Drawing.Point(114, 105);
             this.dtTarih.Name = "dtTarih";
             this.dtTarih.Size = new System.Drawing.Size(132, 23);
             this.dtTarih.TabIndex = 3;
@@ -180,24 +182,25 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(9, 152);
+            this.label7.Location = new System.Drawing.Point(8, 105);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(45, 17);
             this.label7.TabIndex = 13;
             this.label7.Text = "Tarih:";
             // 
-            // button1
+            // BtnGetir
             // 
-            this.button1.BackColor = System.Drawing.Color.DarkGreen;
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(123, 283);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 28);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "GETİR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.BtnGetir.BackColor = System.Drawing.Color.DarkGreen;
+            this.BtnGetir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnGetir.Location = new System.Drawing.Point(150, 247);
+            this.BtnGetir.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnGetir.Name = "BtnGetir";
+            this.BtnGetir.Size = new System.Drawing.Size(96, 28);
+            this.BtnGetir.TabIndex = 7;
+            this.BtnGetir.Text = "GETİR";
+            this.BtnGetir.UseVisualStyleBackColor = false;
+            this.BtnGetir.Click += new System.EventHandler(this.BtnGetir_Click);
             // 
             // label9
             // 
@@ -222,18 +225,19 @@
             // 
             this.BtnEkle.BackColor = System.Drawing.Color.DarkRed;
             this.BtnEkle.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.BtnEkle.Location = new System.Drawing.Point(11, 283);
+            this.BtnEkle.Location = new System.Drawing.Point(11, 247);
             this.BtnEkle.Margin = new System.Windows.Forms.Padding(4);
             this.BtnEkle.Name = "BtnEkle";
             this.BtnEkle.Size = new System.Drawing.Size(96, 28);
             this.BtnEkle.TabIndex = 6;
             this.BtnEkle.Text = "EKLE";
             this.BtnEkle.UseVisualStyleBackColor = false;
+            this.BtnEkle.Click += new System.EventHandler(this.BtnEkle_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(9, 230);
+            this.label10.Location = new System.Drawing.Point(8, 183);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(100, 17);
@@ -242,7 +246,7 @@
             // 
             // TxtFaturaGuncelSayac
             // 
-            this.TxtFaturaGuncelSayac.Location = new System.Drawing.Point(115, 224);
+            this.TxtFaturaGuncelSayac.Location = new System.Drawing.Point(114, 177);
             this.TxtFaturaGuncelSayac.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFaturaGuncelSayac.Name = "TxtFaturaGuncelSayac";
             this.TxtFaturaGuncelSayac.Size = new System.Drawing.Size(132, 23);
@@ -251,7 +255,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(9, 195);
+            this.label11.Location = new System.Drawing.Point(8, 148);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(99, 17);
@@ -260,7 +264,7 @@
             // 
             // TxtFaturaOncekiSayac
             // 
-            this.TxtFaturaOncekiSayac.Location = new System.Drawing.Point(115, 189);
+            this.TxtFaturaOncekiSayac.Location = new System.Drawing.Point(114, 142);
             this.TxtFaturaOncekiSayac.Margin = new System.Windows.Forms.Padding(4);
             this.TxtFaturaOncekiSayac.Name = "TxtFaturaOncekiSayac";
             this.TxtFaturaOncekiSayac.Size = new System.Drawing.Size(132, 23);
@@ -285,24 +289,6 @@
             this.TxtFaturaAboneNo.Size = new System.Drawing.Size(132, 23);
             this.TxtFaturaAboneNo.TabIndex = 0;
             // 
-            // cboxFaturaAboneTuru
-            // 
-            this.cboxFaturaAboneTuru.FormattingEnabled = true;
-            this.cboxFaturaAboneTuru.Location = new System.Drawing.Point(115, 114);
-            this.cboxFaturaAboneTuru.Name = "cboxFaturaAboneTuru";
-            this.cboxFaturaAboneTuru.Size = new System.Drawing.Size(121, 24);
-            this.cboxFaturaAboneTuru.TabIndex = 14;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 123);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 17);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Abone Türü:";
-            // 
             // BtnBas
             // 
             this.BtnBas.BackColor = System.Drawing.Color.Transparent;
@@ -317,12 +303,58 @@
             this.BtnBas.UseVisualStyleBackColor = false;
             this.BtnBas.Click += new System.EventHandler(this.BtnBas_Click);
             // 
+            // dgvBilgiler
+            // 
+            this.dgvBilgiler.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBilgiler.Location = new System.Drawing.Point(575, 85);
+            this.dgvBilgiler.MultiSelect = false;
+            this.dgvBilgiler.Name = "dgvBilgiler";
+            this.dgvBilgiler.ReadOnly = true;
+            this.dgvBilgiler.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBilgiler.Size = new System.Drawing.Size(560, 433);
+            this.dgvBilgiler.TabIndex = 3;
+            this.dgvBilgiler.DoubleClick += new System.EventHandler(this.dgvBilgiler_DoubleClick);
+            // 
+            // BtnTumunuGetir
+            // 
+            this.BtnTumunuGetir.BackColor = System.Drawing.Color.DarkGreen;
+            this.BtnTumunuGetir.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnTumunuGetir.Location = new System.Drawing.Point(35, 289);
+            this.BtnTumunuGetir.Margin = new System.Windows.Forms.Padding(4);
+            this.BtnTumunuGetir.Name = "BtnTumunuGetir";
+            this.BtnTumunuGetir.Size = new System.Drawing.Size(183, 28);
+            this.BtnTumunuGetir.TabIndex = 14;
+            this.BtnTumunuGetir.Text = "Tüm Kayıtları Getir";
+            this.BtnTumunuGetir.UseVisualStyleBackColor = false;
+            this.BtnTumunuGetir.Click += new System.EventHandler(this.BtnTumunuGetir_Click);
+            // 
+            // lblToplamBorc
+            // 
+            this.lblToplamBorc.AutoSize = true;
+            this.lblToplamBorc.Location = new System.Drawing.Point(932, 55);
+            this.lblToplamBorc.Name = "lblToplamBorc";
+            this.lblToplamBorc.Size = new System.Drawing.Size(92, 17);
+            this.lblToplamBorc.TabIndex = 4;
+            this.lblToplamBorc.Text = "Toplam Borç:";
+            // 
+            // TxtToplamBorc
+            // 
+            this.TxtToplamBorc.Enabled = false;
+            this.TxtToplamBorc.Location = new System.Drawing.Point(1030, 52);
+            this.TxtToplamBorc.Name = "TxtToplamBorc";
+            this.TxtToplamBorc.ReadOnly = true;
+            this.TxtToplamBorc.Size = new System.Drawing.Size(100, 23);
+            this.TxtToplamBorc.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(558, 352);
+            this.ClientSize = new System.Drawing.Size(1150, 530);
+            this.Controls.Add(this.TxtToplamBorc);
+            this.Controls.Add(this.lblToplamBorc);
+            this.Controls.Add(this.dgvBilgiler);
             this.Controls.Add(this.BtnBas);
             this.Controls.Add(this.GroupBoxFatura);
             this.Controls.Add(this.GroupBoxAbone);
@@ -335,7 +367,9 @@
             this.GroupBoxAbone.PerformLayout();
             this.GroupBoxFatura.ResumeLayout(false);
             this.GroupBoxFatura.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBilgiler)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         #endregion
@@ -346,14 +380,12 @@
         private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtAboneNo;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cboxAboneTuru;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox GroupBoxFatura;
-        private System.Windows.Forms.ComboBox cboxFaturaAboneTuru;
         private System.Windows.Forms.DateTimePicker dtTarih;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnGetir;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox TxtFaturaAdSoyad;
         private System.Windows.Forms.Button BtnEkle;
@@ -364,6 +396,10 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox TxtFaturaAboneNo;
         private System.Windows.Forms.Button BtnBas;
+        private System.Windows.Forms.DataGridView dgvBilgiler;
+        private System.Windows.Forms.Button BtnTumunuGetir;
+        private System.Windows.Forms.Label lblToplamBorc;
+        private System.Windows.Forms.TextBox TxtToplamBorc;
     }
 }
 
