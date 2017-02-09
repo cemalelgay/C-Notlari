@@ -28,6 +28,7 @@ namespace IZSUFormApp
             #region ErişimKısıtlama
             BtnKaydet.Enabled = false;
             GroupBoxFatura.Enabled = false;
+            TxtFaturaOncekiSayac.ReadOnly = true;
             #endregion
             #region AboneTurleriCekmeVeYenıAboneNo
             using (IzsuDBContext context = new IzsuDBContext())
@@ -103,6 +104,8 @@ namespace IZSUFormApp
             {
                 context.Abone.Add(a);
                 context.SaveChanges();
+                MessageBox.Show("Abone Kaydı Yaıpıldı!");
+                TxtAboneNo_Leave(sender, e);
             }
         }
 
@@ -147,7 +150,7 @@ namespace IZSUFormApp
                 // var result = context.Fatura.
                 //FirstOrDefault(fa => f.AboneID == _aboneID && (fa.FaturaTarihi.Month == dtTarih.Value.Month && fa.FaturaTarihi.Year == dtTarih.Value.Year));
 
-                var result = context.Fatura.FirstOrDefault(fa => fa.AboneID == _aboneID && (fa.FaturaTarihi.Month == dtTarih.Value.Month && fa.FaturaTarihi.Year == dtTarih.Value.Year));
+                var result = context.Fatura.FirstOrDefault(fa => fa.AboneID == _aboneID && (fa.FaturaTarihi.Month == dtTarih.Value.Month && fa.FaturaTarihi.Year == dtTarih.Value.Year)); //Abone ID ve Fatura tarihi --- Ay yıl(DateTimePicker) ayrı ayrı sorgulanıyor. --- 
 
                 if (result != null)
                 {
@@ -158,32 +161,36 @@ namespace IZSUFormApp
                     context.Fatura.Add(f);
                     context.SaveChanges();
                     MessageBox.Show("Fatura Eklendi");
+                    BtnTumunuGetir_Click(sender, e);
                 }
             }
         }
 
         private void BtnGetir_Click(object sender, EventArgs e)
         {
-            int _aboneNo = int.Parse(TxtFaturaAboneNo.Text);
-
-            using (IzsuDBContext context = new IzsuDBContext())
-            {
-                int _aboneID = context.Abone.FirstOrDefault(a => a.AboneNo == _aboneNo).AboneID;
-
-                dgvBilgiler.DataSource = context.Fatura.Where(f => f.AboneID == _aboneID && (f.FaturaTarihi.Month == dtTarih.Value.Month && f.FaturaTarihi.Year == dtTarih.Value.Year)).Select
-                (f => new
-                {
-                    FaturaID = f.FaturaID,
-                    AboneAd = f.Abone.AboneAdSoyad,
-                    OdemeTutari = f.OdemeTutari,
-                    OdemeDurumu = f.Tahsilat == false ? "Ödenmedi" : "Ödendi",
-                    Tarih = f.FaturaTarihi.Month + "-" + f.FaturaTarihi.Year
-                }).ToList();
-            }
-
+            FaturaGetir();
         }
 
         private void BtnTumunuGetir_Click(object sender, EventArgs e)
+        {
+            TumFaturalariListele();
+        }
+
+        private void dgvBilgiler_DoubleClick(object sender, EventArgs e)
+        {
+            int faturaID = Convert.ToInt32(dgvBilgiler.SelectedRows[0].Cells[0].Value);
+
+            DialogResult dr = MessageBox.Show("Ödeme Yapmak İstiyor Musunuz?", "Uyarı", MessageBoxButtons.OKCancel);
+
+            using (IzsuDBContext context = new IzsuDBContext())
+            {
+                var result = context.Fatura.FirstOrDefault(f => f.FaturaID == faturaID);
+
+                result.Tahsilat = true;
+                context.SaveChanges();
+            }
+        }
+        public void TumFaturalariListele()
         {
             int _aboneNo = int.Parse(TxtFaturaAboneNo.Text);
 
@@ -211,22 +218,28 @@ namespace IZSUFormApp
 
                 TxtToplamBorc.Text = toplamBorc + " ₺";
 
-                dgvBilgiler.DataSource = result; 
+                dgvBilgiler.DataSource = result;
             }
         }
-
-        private void dgvBilgiler_DoubleClick(object sender, EventArgs e)
+        public void FaturaGetir()
         {
-            int faturaID = Convert.ToInt32(dgvBilgiler.SelectedRows[0].Cells[0].Value);
-
-            DialogResult dr = MessageBox.Show("Ödeme Yapmak İstiyor Musunuz?", "Uyarı", MessageBoxButtons.OKCancel);
+            int _aboneNo = int.Parse(TxtFaturaAboneNo.Text);
 
             using (IzsuDBContext context = new IzsuDBContext())
             {
-                var result = context.Fatura.FirstOrDefault(f => f.FaturaID == faturaID);
+                int _aboneID = context.Abone.FirstOrDefault(a => a.AboneNo == _aboneNo).AboneID;
 
-                result.Tahsilat = true;
-                context.SaveChanges();
+                dgvBilgiler.DataSource = context.Fatura.Where(f => f.AboneID == _aboneID &&
+                (f.FaturaTarihi.Month == dtTarih.Value.Month &&
+                f.FaturaTarihi.Year == dtTarih.Value.Year)).Select
+                (f => new
+                {
+                    FaturaID = f.FaturaID,
+                    AboneAd = f.Abone.AboneAdSoyad,
+                    OdemeTutari = f.OdemeTutari,
+                    OdemeDurumu = f.Tahsilat == false ? "Ödenmedi" : "Ödendi",
+                    Tarih = f.FaturaTarihi.Month + "-" + f.FaturaTarihi.Year
+                }).ToList();
             }
         }
     }
