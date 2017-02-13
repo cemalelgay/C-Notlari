@@ -1,0 +1,73 @@
+﻿body 
+{
+    background-image: url('images/singapur.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#main 
+{
+    padding: 10px;
+    width: 580px;
+    height: 780px;
+    margin: auto;
+    background-color: ActiveCaption;
+}
+#banner 
+{
+    height: 75px;
+    background-color:#00ffff;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Segoe UI';
+    font-style: normal;
+    padding-top: 25px;
+}
+#menu 
+{
+    padding: 5px;
+    width: 140px;
+    background-color:#00ffff;
+    height: 390px;
+    float: left;
+    margin-top: 5px;
+}
+.Kenar 
+{
+    border-radius: 20px 20px 20px 20px;
+}
+#content 
+{
+    background-color: ActiveCaption;
+    padding: 5px 0px 0px 20px;
+    margin-top: 10px;
+    margin-left: 180px;
+    height: 390px;
+    width: 380px;
+}
+#footer
+{
+    background-color:#00ffff;
+    height:250px;
+    width:100%;
+    color:white;
+    float:right;
+    margin-top:10px;
+    text-align:center;
+}
+#content img
+{
+    margin:5px;
+    border-radius:20px 20px 20px 20px;
+    opacity:0.4;
+}
+.ForImages
+{
+    width:150px;
+    height:150px;
+}
+#content img:hover 
+{
+    opacity:1;
+    width:200px;
+    height:200px;
+}
