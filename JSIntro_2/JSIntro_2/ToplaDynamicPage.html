@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        function Topla()
+        {
+            var sayi1 = document.getElementById("sayi1").value;
+            var sayi2 = document.getElementById("sayi2").value;
+            var toplam = parseInt(sayi1) + parseInt(sayi2);
+            alert(toplam);
+        }
+    </script>
+</head>
+<body>
+    <input id="sayi1" type="text" />
+    <input id="sayi2" type="text" />
+    <input id="button1" type="button" value="topla" onclick="Topla()" />
+</body>
+</html>
