@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        function ekle()
+        {
+            var metin = document.getElementById("txts").value;
+            document.getElementById("sohbetAlani").innerHTML += metin + "</br>";
+            txts.value = "";
+        }
+        function onPress_Enter()
+        {
+            var keyPressed = event.which || event.keyCode;
+            if (keyPressed == 13)
+            {
+                ekle();
+                keyPressed = null;
+            }
+            else { return false; }
+        }
+    </script>
+</head>
+<body>
+    <div id="sohbetAlani">
+
+    </div>
+    <div>
+        <input type="text" id="txts" onkeypress="onPress_Enter()"/>
+        <input type="button" value="Gonder" onclick="ekle()" />
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        function Listele()
+        {
+            var superHeros = new Array();
+            superHeros[0] = "Spider Man";
+            superHeros[1] = "Joker";
+            superHeros[2] = "Batman";
+            superHeros[3] = "Hulk";
+            superHeros[4] = "Super Man";
+            var element = "<ul>";
+            for (var i = 0; i < superHeros.length; i++)
+            {
+                element += "<li>" + superHeros[i] + "</li>";
+            }
+            element += "</ul>";
+
+            document.getElementById("Super").innerHTML = element;
+
+        }
+        function Cursor() {
+            document.getElementById("mesaj").style.cursor = "pointer";
+        }
+    </script>
+</head>
+<body>
+    <div id="mesaj" onclick="Listele()" onmouseover="Cursor()">
+        Super Kahramanları görmek için tıklayınız
+    </div>
+    <div id="Super">
+
+    </div>   
+</body>
+</html>
