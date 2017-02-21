@@ -4,14 +4,22 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Müşteriler</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <style type="text/css">
+        body {
+            font-family: Calibri;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <h1>Musteriler</h1>
-            <a href="#">Yeni Ekle</a>
-            <table border="1">
+        <div class="container">
+            <h1>Erdal Bakkalın Müşterileri</h1>
+            <a href="MusteriEkle.aspx" class="btn-primary">Yeni Ekle</a><br />
+            <br />
+            <div class="table-responsive"></div>
+            <table class="table table-bordered">
                 <tr>
                     <th>ID</th>
                     <th>Ad</th>
@@ -20,7 +28,6 @@
                     <th>Adres</th>
                     <th>Düzenle</th>
                 </tr>
-
                 <asp:Repeater ID="Repeater1" runat="server">
                     <ItemTemplate>
                         <tr>
@@ -30,13 +37,12 @@
                             <td><%#Eval("PhoneNumber") %></td>
                             <td><%#Eval("Adress") %></td>
                             <td>
-                                <a href="#">Güncelle</a>
-                                <a href="#">Sil</a>
+                                <a href="MusteriDuzenle.aspx?ID=<%#Eval("CustomerID") %>" class="btn btn-primary">Güncelle</a>
+                                <a href="#" class="btn btn-success">Sil</a>
                             </td>
                         </tr>
                     </ItemTemplate>
                 </asp:Repeater>
-
             </table>
         </div>
     </form>

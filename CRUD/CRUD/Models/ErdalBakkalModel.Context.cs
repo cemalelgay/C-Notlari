@@ -12,19 +12,19 @@ namespace CRUD.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
-    
-    public partial class BakkalDBEntities : DbContext
+
+    public partial class BakkalDBEntities1 : DbContext
     {
-        public BakkalDBEntities()
-            : base("name=BakkalDBEntities")
+        public BakkalDBEntities1()
+            : base("name=BakkalDBEntities1")
         {
         }
-    
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+
         public virtual DbSet<Customer> Customers { get; set; }
     }
 }

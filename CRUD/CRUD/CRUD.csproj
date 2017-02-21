@@ -104,26 +104,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <EntityDeploy Include="Models\ErdalBakkalModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ErdalBakkalModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\ErdalBakkalModel.edmx.diagram">
-      <DependentUpon>ErdalBakkalModel.edmx</DependentUpon>
-    </Content>
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Global.asax" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="images\258446_20131010185957.jpg" />
     <Content Include="Models\ErdalBakkalModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ErdalBakkalModel.edmx</DependentUpon>
@@ -134,10 +120,47 @@
       <DependentUpon>ErdalBakkalModel.edmx</DependentUpon>
       <LastGenOutput>ErdalBakkalModel.cs</LastGenOutput>
     </Content>
+    <Content Include="MusteriDuzenle.aspx" />
+    <Content Include="MusteriEkle.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <EntityDeploy Include="Models\ErdalBakkalModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ErdalBakkalModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\ErdalBakkalModel.edmx.diagram">
+      <DependentUpon>ErdalBakkalModel.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
     <Content Include="Musteriler.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BakkaldDBEntities.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -158,6 +181,20 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>ErdalBakkalModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriDuzenle.aspx.cs">
+      <DependentUpon>MusteriDuzenle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusteriDuzenle.aspx.designer.cs">
+      <DependentUpon>MusteriDuzenle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MusteriEkle.aspx.cs">
+      <DependentUpon>MusteriEkle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MusteriEkle.aspx.designer.cs">
+      <DependentUpon>MusteriEkle.aspx</DependentUpon>
     </Compile>
     <Compile Include="Musteriler.aspx.cs">
       <DependentUpon>Musteriler.aspx</DependentUpon>

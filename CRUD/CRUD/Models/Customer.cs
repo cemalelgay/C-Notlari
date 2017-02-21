@@ -16,7 +16,7 @@ namespace CRUD.Models
     {
         public int CustomerID { get; set; }
         public string CustomerName { get; set; }
-        public string CustomerSummer { get; set; }
+        public string CustomerSurname { get; set; }
         public string PhoneNumber { get; set; }
         public string Adress { get; set; }
     }
