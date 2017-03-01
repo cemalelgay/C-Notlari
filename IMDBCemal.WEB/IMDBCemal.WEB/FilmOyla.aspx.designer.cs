@@ -10,7 +10,7 @@
 namespace IMDBCemal.WEB {
     
     
-    public partial class FilmEkle {
+    public partial class FilmOyla {
         
         /// <summary>
         /// form1 control.
@@ -40,24 +40,6 @@ namespace IMDBCemal.WEB {
         protected global::System.Web.UI.WebControls.TextBox txtFilmAdi;
         
         /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// txtFilmKonusu control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFilmKonusu;
-        
-        /// <summary>
         /// Label3 control.
         /// </summary>
         /// <remarks>
@@ -67,57 +49,39 @@ namespace IMDBCemal.WEB {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// calender1 control.
+        /// txtEskiPuan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calender1;
+        protected global::System.Web.UI.WebControls.TextBox txtEskiPuan;
         
         /// <summary>
-        /// Label4 control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// ddlYonetmen control.
+        /// txtPuan control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlYonetmen;
+        protected global::System.Web.UI.WebControls.TextBox txtPuan;
         
         /// <summary>
-        /// Label5 control.
+        /// btnKaydet control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
-        
-        /// <summary>
-        /// ddlFilmTur control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFilmTur;
-        
-        /// <summary>
-        /// btnEkle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEkle;
+        protected global::System.Web.UI.WebControls.Button btnKaydet;
     }
 }

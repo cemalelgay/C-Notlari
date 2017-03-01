@@ -10,7 +10,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-   <div class="container">
+        <div class="container">
             <h1>Film Ekle</h1>
             <a href="FilmListesi.aspx" class="btn btn-primary">Ana Sayfa</a><br />
             <table class="table table-bordered">
@@ -35,20 +35,37 @@
                         <asp:Label ID="Label3" runat="server" Text="Çıkış Tarihi:"></asp:Label>
                     </td>
                     <td>
-                        <asp:TextBox ID="txtCıkısTarihi" CssClass="form-control" runat="server"></asp:TextBox>
+                        <asp:Calendar CssClass="form-control" ID="calender1" runat="server" BackColor="White" BorderColor="#999999" Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" Height="180px" Width="200px" CellPadding="4" DayNameFormat="Shortest">
+                            <DayHeaderStyle Font-Bold="True" Font-Size="7pt" BackColor="#CCCCCC" />
+                            <NextPrevStyle VerticalAlign="Bottom" />
+                            <OtherMonthDayStyle ForeColor="#808080" />
+                            <SelectedDayStyle BackColor="#666666" ForeColor="White" Font-Bold="True" />
+                            <SelectorStyle BackColor="#CCCCCC" />
+                            <TitleStyle BackColor="#999999" BorderColor="Black" Font-Bold="True" />
+                            <TodayDayStyle BackColor="#CCCCCC" ForeColor="Black" />
+                            <WeekendDayStyle BackColor="#FFFFCC" />
+                        </asp:Calendar>
                     </td>
-                </tr>               
+                </tr>
                 <tr>
                     <td>
-                        <asp:Label ID="Label5" runat="server" Text="Yönetmen:"></asp:Label>
+                        <asp:Label ID="Label4" runat="server" Text="Yönetmen:"></asp:Label>
                     </td>
                     <td>
                         <asp:DropDownList ID="ddlYonetmen" CssClass="form-control" runat="server"></asp:DropDownList>
                     </td>
                 </tr>
                 <tr>
+                    <td>
+                        <asp:Label ID="Label5" runat="server" Text="Film Türü:"></asp:Label>
+                    </td>
+                    <td>
+                        <asp:DropDownList ID="ddlFilmTur" CssClass="form-control" runat="server"></asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
                     <td colspan="2">
-                        <asp:Button ID="btnEkle" CssClass="btn btn-primary btn-block" runat="server" Text="Ekle"/>
+                        <asp:Button ID="btnEkle" CssClass="btn btn-primary btn-block" runat="server" Text="Ekle" />
                     </td>
                 </tr>
             </table>

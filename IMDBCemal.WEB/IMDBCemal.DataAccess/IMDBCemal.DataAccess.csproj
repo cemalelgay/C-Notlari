@@ -64,7 +64,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TurDepo.cs" />
-    <Compile Include="YonetmenlerDepo.cs" />
+    <Compile Include="YonetmenDepo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -92,9 +92,9 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IMDBCemal.WEB\IMDBCemal.WEB.csproj">
-      <Project>{08cb54b5-a177-4429-abef-fa76ed662b19}</Project>
-      <Name>IMDBCemal.WEB</Name>
+    <ProjectReference Include="..\IMDBCemal.Entity\IMDBCemal.Entity.csproj">
+      <Project>{a25d755f-55e6-4a9e-bad1-6874313c928d}</Project>
+      <Name>IMDBCemal.Entity</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

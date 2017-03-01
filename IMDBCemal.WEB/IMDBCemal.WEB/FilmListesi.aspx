@@ -23,10 +23,9 @@
                 <ul class="dropdown-menu" role="menu">
                     <li><a href="FilmEkle.aspx">Film Ekle</a></li>
                     <li><a href="YonetmenEkle.aspx">Yönetmen Ekle</a></li>
-                    <li><a href="#">Tür Ekle</a></li>
-                    <li><a href="#">Film Listesi</a></li>
+                    <li><a href="TurEkle.aspx">Tür Ekle</a></li>
+                    <li><a href="FilmListesi.aspx">Film Listesi</a></li>
                     <li><a href="YonetmenListesi.aspx">Yönetmen Listesi</a></li>
-                    <li><a href="#">Tür Listesi</a></li>
                 </ul>
             </div>
             &nbsp;
@@ -34,26 +33,22 @@
                 <table class="table table-bordered">
                     <tr>
                         <th>Film Adı</th>
-                        <th>Film Konusu</th>
-                        <th>Film Puanı</th>
-                        <th>Çıkış Tarihi</th>
-                        <th>Yönetmen</th>
+                        <th>Yönetmen Adı</th>
+                        <th>Tür</th>
+                        <th>Ortalama Puan</th>
                         <th>İşlem</th>
                     </tr>
                     <asp:Repeater ID="Repeater1" runat="server">
                         <ItemTemplate>
                             <tr class="<%#Eval("FilmAdı")%>">
-                                <td><%# Eval("FilmKonusu") %></td>
-                                <td><%# Eval("Filmpuani") %></td>
-                                <td><%# Eval("FilmCikisTarihi") %></td>
-                                <td><%# Eval("PageCount") %></td>
-                                <td><%#Eval("FilmYonetmeni")%></td>
+                                <td><%# Eval("YönetmenAdi") %></td>
+                                <td><%# Eval("TürAdi") %></td>
+                                <td><%# Eval("Puanlama").ToString()=="-1"?"-":Eval("Puanlama") %></td>
                                 <td>
                                     <a href="FilmEkle.aspx?ID=<%#Eval("FilmID") %>" class="btn btn-primary btn-floating">Güncelle</a>
-                                    <a href="#?ID=<%#Eval("FilmID") %>" class="btn btn-danger btn-floating">Ekle</a>
-                                    <a href="#?ID=<%#Eval("FilmID") %>" class="btn btn-success btn-floating">Sil</a>
-                                    <a href="#?ID=<%#Eval("FilmID") %>" class="btn btn-warning btn-floating">Detay</a>
-                                    <a href="#?ID=<%#Eval("FilmID") %>" class="btn btn-info btn-floating">OyVer</a>
+                                    <a href="FilmListesi.aspx?ID=<%#Eval("FilmID") %>" class="btn btn-danger btn-floating">Sil</a>
+                                    <a href="FilmDetay.aspx?ID=<%#Eval("FilmID") %>" class="btn btn-success btn-floating">Detaylar</a>
+                                    <a href="FilmOyla.aspx?ID=<%#Eval("FilmID") %>" class="btn btn-warning btn-floating">Oy Ver</a>
                                     <%--                                    <a href="Musteriler.aspx?ID=<%# Eval("BookID") %>" class="btn btn-danger btn-block">Sil</a>--%>
                                     <%--<asp:Button runat="server" ID="btn" OnClientClick="return confirm('Here give some meaningful text')" OnClick="BtnClick" />--%>
                                 </td>

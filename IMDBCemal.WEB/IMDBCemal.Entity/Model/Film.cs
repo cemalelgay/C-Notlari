@@ -15,8 +15,8 @@ namespace IMDBCemal.Entity.Model
         public double FilmPuani { get; set; }
         public int FilmSayisi { get; set; }
         public int TurID { get; set; }
-        public int YonetmenlerID { get; set; }
+        public int YonetmenID { get; set; }
         public Tur Tur { get; set; }
-        public Yonetmenler Yonetmenler { get; set; }
+        public Yonetmen Yonetmen { get; set; }
     }
 }
