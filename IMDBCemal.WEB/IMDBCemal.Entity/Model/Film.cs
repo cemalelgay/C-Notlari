@@ -12,8 +12,11 @@ namespace IMDBCemal.Entity.Model
         public string FilmAdı { get; set; }
         public string FilmKonusu { get; set; }
         public DateTime FilmCikisTarihi { get; set; }
-        public int FilmPuani { get; set; }
-        public string TurID { get; set; }
-        public string FilmYonetmeni { get; set; }
+        public double FilmPuani { get; set; }
+        public int FilmSayisi { get; set; }
+        public int TurID { get; set; }
+        public int YonetmenlerID { get; set; }
+        public Tur Tur { get; set; }
+        public Yonetmenler Yonetmenler { get; set; }
     }
 }

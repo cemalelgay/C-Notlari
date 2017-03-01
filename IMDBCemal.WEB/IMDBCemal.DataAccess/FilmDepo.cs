@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IMDBCemal.Entity.Model
+namespace IMDBCemal.DataAccess
 {
-    public class Tur
+    class FilmDepo
     {
-        public int TurID { get; set; }
-        public string TurAdi { get; set; }
     }
 }

@@ -67,7 +67,6 @@
     <Compile Include="Model\Film.cs" />
     <Compile Include="Model\Tur.cs" />
     <Compile Include="Model\Yonetmenler.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
