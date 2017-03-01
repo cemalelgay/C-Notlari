@@ -12,9 +12,11 @@ namespace KutuphaneOtomasyon.Entity.Model.ViewModel
         public string BookName { get; set; }
         public string BookSubject { get; set; }
         public int PageCount { get; set; }
-        public string WriterName { get; set; }
         public int ShelfNumber { get; set; }
         public bool IsRented { get; set; }
+        public string WriterName { get; set; }
+
+
 
         //Mapping
 
