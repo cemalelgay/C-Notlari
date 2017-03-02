@@ -13,6 +13,6 @@ namespace IMDBCemal.Entity
         }
         public virtual DbSet<Film> Film { get; set; }
         public virtual DbSet<Tur> Tur { get; set; }
-        public virtual DbSet<Yonetmenler> Yonetmenler { get; set; }
+        public virtual DbSet<Yonetmen> Yonetmen { get; set; }
     }
 }

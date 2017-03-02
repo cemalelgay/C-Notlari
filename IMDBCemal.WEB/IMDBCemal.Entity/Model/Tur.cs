@@ -9,6 +9,6 @@ namespace IMDBCemal.Entity.Model
     public class Tur
     {
         public int TurID { get; set; }
-        public string Konular { get; set; }
+        public string TurAdi { get; set; }
     }
 }

@@ -10,7 +10,7 @@
 namespace IMDBCemal.WEB {
     
     
-    public partial class FilmEkle {
+    public partial class FilmDetay {
         
         /// <summary>
         /// form1 control.
@@ -67,13 +67,13 @@ namespace IMDBCemal.WEB {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// calender1 control.
+        /// txtCikisTarihi control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calender1;
+        protected global::System.Web.UI.WebControls.TextBox txtCikisTarihi;
         
         /// <summary>
         /// Label4 control.
@@ -85,13 +85,13 @@ namespace IMDBCemal.WEB {
         protected global::System.Web.UI.WebControls.Label Label4;
         
         /// <summary>
-        /// ddlYonetmen control.
+        /// ddlTur control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlYonetmen;
+        protected global::System.Web.UI.WebControls.DropDownList ddlTur;
         
         /// <summary>
         /// Label5 control.
@@ -103,21 +103,12 @@ namespace IMDBCemal.WEB {
         protected global::System.Web.UI.WebControls.Label Label5;
         
         /// <summary>
-        /// ddlFilmTur control.
+        /// ddlYonetmen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlFilmTur;
-        
-        /// <summary>
-        /// btnEkle control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnEkle;
+        protected global::System.Web.UI.WebControls.DropDownList ddlYonetmen;
     }
 }

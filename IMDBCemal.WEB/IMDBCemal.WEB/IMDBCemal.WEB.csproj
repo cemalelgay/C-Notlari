@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FilmDetay.aspx" />
+    <Content Include="FilmOyla.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -123,6 +125,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Tur Ekle.aspx" />
     <Content Include="YonetmenEkle.aspx" />
     <Content Include="YonetmenListesi.aspx" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -133,6 +136,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FilmDetay.aspx.cs">
+      <DependentUpon>FilmDetay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FilmDetay.aspx.designer.cs">
+      <DependentUpon>FilmDetay.aspx</DependentUpon>
+    </Compile>
     <Compile Include="FilmEkle.aspx.cs">
       <DependentUpon>FilmEkle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -147,10 +157,24 @@
     <Compile Include="FilmListesi.aspx.designer.cs">
       <DependentUpon>FilmListesi.aspx</DependentUpon>
     </Compile>
+    <Compile Include="FilmOyla.aspx.cs">
+      <DependentUpon>FilmOyla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FilmOyla.aspx.designer.cs">
+      <DependentUpon>FilmOyla.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tur Ekle.aspx.cs">
+      <DependentUpon>Tur Ekle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tur Ekle.aspx.designer.cs">
+      <DependentUpon>Tur Ekle.aspx</DependentUpon>
+    </Compile>
     <Compile Include="YonetmenEkle.aspx.cs">
       <DependentUpon>YonetmenEkle.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +193,16 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IMDBCemal.DataAccess\IMDBCemal.DataAccess.csproj">
+      <Project>{8a0862f7-b253-46b6-9fe7-735d54085fc5}</Project>
+      <Name>IMDBCemal.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMDBCemal.Entity\IMDBCemal.Entity.csproj">
+      <Project>{a25d755f-55e6-4a9e-bad1-6874313c928d}</Project>
+      <Name>IMDBCemal.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

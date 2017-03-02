@@ -66,8 +66,8 @@
     <Compile Include="Model\ImdbDBContext.cs" />
     <Compile Include="Model\Film.cs" />
     <Compile Include="Model\Tur.cs" />
-    <Compile Include="Model\Yonetmenler.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Model\ViewModel\VMFilm.cs" />
+    <Compile Include="Model\Yonetmen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -91,16 +91,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\IMDBCemal.DataAccess\IMDBCemal.DataAccess.csproj">
-      <Project>{8a0862f7-b253-46b6-9fe7-735d54085fc5}</Project>
-      <Name>IMDBCemal.DataAccess</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IMDBCemal.WEB\IMDBCemal.WEB.csproj">
-      <Project>{08cb54b5-a177-4429-abef-fa76ed662b19}</Project>
-      <Name>IMDBCemal.WEB</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
