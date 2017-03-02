@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tempdata</title>
+</head>
+<body>
+    <div> 
+        @TempData["Messages3"] <br/>
+        <hr />
+        @*Alt kısıma bir veri gelmez*@ 
+        @ViewData["Messages1"] <br />
+        @ViewBag.Messages2
+
+    </div>
+</body>
+</html>

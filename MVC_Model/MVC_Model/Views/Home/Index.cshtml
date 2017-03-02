@@ -1,0 +1,47 @@
+﻿@using MVC_Model.Models
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.9.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Ögrenciler</h2>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Ad</th>
+                        <th>Soyad</th>
+                        <th>Öğrenci No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach (Ogrenci item in (List<Ogrenci>)ViewBag.ogrenciList)
+                        {
+                            <tr>
+                                <td>@item.id</td>
+                                <td>@item.Name</td>
+                                <td>@item.Surname</td>
+                                <td>@item.StudentNumber</td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

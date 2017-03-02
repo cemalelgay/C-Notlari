@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MVC 101</title>
+</head>
+<body>
+    <div> 
+        <p>@DateTime.Now</p>
+        <p>@ViewBag.Mesaj</p>
+
+        @{ 
+            string ad = "Yavuz";
+            string soyad = "Gedik";
+
+            <p>Adı: @ad</p>
+            <p>Soyadı: @soyad</p>
+        }
+
+        <h3>Razor İle Döngü Kullanımı</h3>
+        @*yorum satırı*@
+        @{ 
+            for (int i = 0; i < 10; i++)
+            {
+                //ad soyado yazıp yeni satıra geçiyor
+                <p>@ad &nbsp; @soyad</p>
+            }
+        }
+        <h3>Razor İle Karar Yapıları</h3>
+        @{ 
+            if (ad !=null)
+            {
+                <span>Boş Değil</span>
+            }
+            else
+            {
+                <span>İsim Boş</span>
+            }
+        }
+    </div>
+</body>
+</html>
