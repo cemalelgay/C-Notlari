@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Araç Ekle";
+}
+
+<h2>Araç Ekle</h2>
+@using (Html.BeginForm("Add", "Car"))
+{
+    <form class="form-horizontal">
+        <div class="form-group">
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputMarka" placeholder="Marka" name="Brand">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputModel" placeholder="Model" name="Model">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputYas" placeholder="Araç Yaşı" name="Age">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="submit" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+        function Gonder() {
+            var Brand = document.getElementById("İnputMarka").value;
+            var Brand = document.getElementById("İnputModel").value;
+            var Brand = document.getElementById("İnputYas").value;
+
+            var data = JSON.stringify({
+                'Brand': brand.toString(),
+                'Model': model.toString(),
+                'Age': age.toString()
+            });
+
+            $.ajax({
+                type: "POST",
+                url: "/Car/Add",
+                data: data,
+                connectType: 'application/json'
+            })
+        }
+    </script>
