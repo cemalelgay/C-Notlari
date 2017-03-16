@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Blog_MVC.DAL.Repos
 {
-    class CategoryRepo
+    public class CategoryRepo
     {
         public static List<Category> GetAll()
         {
@@ -17,11 +17,19 @@ namespace Blog_MVC.DAL.Repos
                 return db.Category.ToList();
             }
         }
-        public static Category Get(int categoryID)
+        public static Category Get(string categoryName)
         {
             using (BlogDBContext db = new BlogDBContext())
             {
-                return db.Category.Find(categoryID);
+                return db.Category.FirstOrDefault(c => c.Name == categoryName);
+            }
+        }
+        public static void Add(Category cat)
+        {
+            using (BlogDBContext db = new BlogDBContext())
+            {
+                db.Category.Add(cat);
+                db.SaveChanges();
             }
         }
     }

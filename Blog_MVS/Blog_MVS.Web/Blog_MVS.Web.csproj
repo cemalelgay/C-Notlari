@@ -127,6 +127,7 @@
     <Content Include="Content\Css\Blog\clean-blog.min.css" />
     <Content Include="Content\Css\Blog\font-awesome.min.css" />
     <Content Include="Content\Css\Fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Css\Summernote\summernote.css" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -145,6 +146,7 @@
     <Content Include="Scripts\contact_me.js" />
     <Content Include="Scripts\jqBootstrapValidation.js" />
     <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\summernote.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -155,6 +157,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ViewModels\VMPost.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +182,12 @@
     <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutAdmin.cshtml" />
     <Content Include="Views\Dashboard\Index.cshtml" />
+    <Content Include="Views\Dashboard\AddPost.cshtml" />
+    <Content Include="Views\Dashboard\ListPost.cshtml" />
+    <Content Include="Content\Css\Summernote\font\summernote.eot" />
+    <Content Include="Content\Css\Summernote\font\summernote.ttf" />
+    <Content Include="Content\Css\Summernote\font\summernote.woff" />
+    <Content Include="Views\Home\PostDetail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,7 +197,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blog_MVC.DAL\Blog_MVC.DAL.csproj">
+      <Project>{bd3d6d62-1b77-41de-a267-310092b58fcd}</Project>
+      <Name>Blog_MVC.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Blog_MVC.Entity\Blog_MVC.Entity.csproj">
+      <Project>{9dfcb49e-14b7-4d27-9b9b-08fd27e5b8e7}</Project>
+      <Name>Blog_MVC.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

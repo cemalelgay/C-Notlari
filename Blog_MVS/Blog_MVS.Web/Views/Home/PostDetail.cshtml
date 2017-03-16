@@ -1,0 +1,30 @@
+﻿@Model Blog_MVC.Entity.Models.Post 
+@{
+    ViewBag.Title = "PostDetail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<header class="intro-header" style="background-image: url('/images/post-bg.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>@Model.Title</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">Yazar <a href="#">Cemal Elgay</a> @Model.PostDate.ToString("dd-MM-yyyy")</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+               @(new HtmlString(Model.Content.ToString()))
+            </div>
+        </div>
+    </div>
+</article>
