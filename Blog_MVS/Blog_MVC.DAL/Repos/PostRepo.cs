@@ -14,7 +14,7 @@ namespace Blog_MVC.DAL.Repos
         {
             using (BlogDBContext db = new BlogDBContext())
             {
-                return db.Post.ToList();
+                return db.Post.Where(p => p.IsDeleted == false).OrderByDescending(p => p.PostDate).ToList();
             }
         }
         public static void Add(Post post)
@@ -45,6 +45,15 @@ namespace Blog_MVC.DAL.Repos
             using (BlogDBContext db = new BlogDBContext())
             {
                 return db.Post.Find(postID);
+            }
+        }
+        public static void Delete(int postID)
+        {
+            using (BlogDBContext db = new BlogDBContext())
+            {
+                var result = db.Post.FirstOrDefault(p => p.PostID == postID);
+                result.IsDeleted = true;
+                db.SaveChanges();
             }
         }
     }

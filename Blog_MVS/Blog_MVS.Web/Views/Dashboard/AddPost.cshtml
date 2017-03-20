@@ -1,4 +1,4 @@
-﻿
+﻿@model Blog_MVC.Entity.Models.Post
 @{
     ViewBag.Title = "AddPost";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
@@ -24,7 +24,7 @@
 
                             @*submite basınca post olur*@
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="Başlık" name="Title" required>
+                                <input class="form-control" type="text" placeholder="Başlık" name="Title" value="@(Model !=null ? Model.Title:"") " required>
                             </div>                         
                             <div class="form-group">
                                 @*Content*@
@@ -36,7 +36,7 @@
                                     <input class="form-control" type="text" placeholder="Kategori" name="Category" required>
                                 </div>                            
                             <div class="form-group">
-                                <input class="form-control" type="text" placeholder="C# , Asp.Net , Microsoft" name="Text" required>
+                                <input class="form-control" type="text" placeholder="C# , Asp.Net , Microsoft" name="Tags" required>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Yayınla</button>
                         </form>

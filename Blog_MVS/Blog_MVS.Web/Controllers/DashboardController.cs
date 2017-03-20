@@ -17,10 +17,20 @@ namespace Blog_MVS.Web.Controllers
             ViewBag.Header = "Panel";
             return View();
         }
+
         public ActionResult AddPost()
         {
             ViewBag.Header = "Yazı Ekle";
             return View();
+        }
+
+        public ActionResult AddPost(int id)
+        {
+            ViewBag.Header = "Yazı Güncelle";
+
+            var result = PostRepo.Get(id);
+
+            return View(result);
         }
 
         [ValidateInput(false)] // Doğrualamayı kapatıyor.
@@ -69,7 +79,13 @@ namespace Blog_MVS.Web.Controllers
 
             var result = (PostRepo.GetAll());
 
-            return View();
+            return View(result);
+        }
+        public ActionResult DeletePost(int id)
+        {
+            PostRepo.Delete(id);
+
+            return RedirectToAction("ListPost","Dashboard");
         }
     }
 }

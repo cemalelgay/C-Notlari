@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-@Model List<Blog_MVC.Entity.Models.Post>
+@model List<Blog_MVC.Entity.Models.Post>
 
 <div class="col-lg-12">
     <div class="panel panel-default">
@@ -16,15 +16,20 @@
                 <table class="table">
                     <thead>
                         <tr>
-                            <th>Ad</th>
-                            <th>Tarih</th>
+                            <th width="20%">İşlem</th>
+                            <th>Başlık</th>
+                            <th>Tarih</th>   
                         </tr>
                     </thead>
                     <tbody>
                         @{
                             foreach (var item in Model)
                             {
-                                <tr>
+                                <tr>                                   
+                                    <td>
+                                        <a href="/Dashboard/AddPost/@item.PostID" class="btn btn-warning btn-circle"><i class="fa fa-pencil"></i></a>
+                                        <a href="/Dashboard/DeletePost/@item.PostID" class="btn btn-danger btn-circle"><i class="fa fa-minus"></i></a>
+                                    </td>
                                     <td>@item.Title</td>
                                     <td>@item.PostDate</td>
                                 </tr>
