@@ -18,13 +18,13 @@ namespace Blog_MVS.Web.Controllers
             return View();
         }
 
-        public ActionResult AddPost()
-        {
-            ViewBag.Header = "Yazı Ekle";
-            return View();
-        }
+        //public ActionResult AddPost()
+        //{
+        //    ViewBag.Header = "Yazı Ekle";
+        //    return View();
+        //}
 
-        public ActionResult AddPost(int id)
+        public ActionResult AddPost(int? id)
         {
             ViewBag.Header = "Yazı Güncelle";
 
