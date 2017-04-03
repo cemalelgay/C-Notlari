@@ -37,5 +37,12 @@ namespace ApiSample2.Service.Controllers
 
             return cat;
         }
+        public void Post(Kategori Kategori)
+        {
+            Category cat = new Category();
+            cat.CategoryName = Kategori.CategoryName;
+            db.Categories.Add(cat);
+            db.SaveChanges();
+        }
     }
 }

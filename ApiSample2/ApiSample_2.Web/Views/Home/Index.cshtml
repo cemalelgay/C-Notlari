@@ -1,0 +1,54 @@
+﻿@model List<ApiSample_2.Web.Models.Kategori>
+@{
+    ViewBag.Title = "Index";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+
+            <h2>Kategoriler</h2>
+
+            <input class="form-control"
+                   type="text"
+                   id="catName"
+                   placeholder="Kategori İsmi" />
+
+            <button class="btn btn-primary btn-block"
+                    onclick="Ekle()">
+                EKLE
+            </button>
+
+
+            <ul class="list-group">
+                @foreach (var item in Model)
+                {
+                    <li class="list-group-item">
+                        @item.CategoryName
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    function Ekle() {
+
+        var name = document.getElementById("catName").value;
+
+        $.ajax({
+            url: 'http://localhost:65021/api/Category',
+            type: 'POST',
+            data: { "CategoryID": null, "CategoryName": name },
+            dataType: "json",
+            success: function () {
+                alert("Eklendi");
+            },
+            Error: function () {
+                alert("Hata Oluştu");
+            }
+        });
+
+        window.location.href = "/Home/Index";
+    }
+</script>
