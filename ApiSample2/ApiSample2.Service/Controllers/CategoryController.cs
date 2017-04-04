@@ -15,6 +15,7 @@ namespace ApiSample2.Service.Controllers
 
         public List<Kategori> Get()
         {
+            //fiddler , postman
             //http://localhost:65021/api/Category/
             //http://localhost:65021/api/Category/Get
             List<Kategori> catList = db.Categories.Select(x => new Kategori()
@@ -42,6 +43,18 @@ namespace ApiSample2.Service.Controllers
             Category cat = new Category();
             cat.CategoryName = Kategori.CategoryName;
             db.Categories.Add(cat);
+            db.SaveChanges();
+        }
+        public void Put(Kategori kategori) //Güncelleme
+        {
+            var cat = db.Categories.FirstOrDefault(c => c.CategoryID == kategori.CategoryID);
+            cat.CategoryName = kategori.CategoryName;
+            db.SaveChanges();
+        }
+        public void Delete(int id) //Silme
+        {
+            var cat = db.Categories.FirstOrDefault(c => c.CategoryID == id);
+            db.Categories.Remove(cat);
             db.SaveChanges();
         }
     }
